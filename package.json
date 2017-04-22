@@ -1,0 +1,37 @@
+{
+  "name": "typed-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "migrate:createdb": "babel-node tasks/migrate/createdb",
+    "migrate:rollback": "babel-node tasks/migrate/rollback",
+    "migrate:dropdb": "babel-node tasks/migrate/dropdb",
+    "migrate:latest": "babel-node tasks/migrate/latest",
+    "migrate:make": "babel-node tasks/migrate/make",
+    "seed:make": "babel-node tasks/seed/make",
+    "seed:run": "babel-node tasks/seed/run",
+    "start": "node build/server",
+    "dev": "DEBUG=typed-api:* nodemon build/server"
+  },
+  "dependencies": {
+    "bluebird": "3.5.0",
+    "body-parser": "^1.17.1",
+    "debug": "^2.6.3",
+    "express": "^4.15.2",
+    "immutable": "^3.8.1",
+    "knex": "^0.12.9",
+    "pg": "^6.1.5",
+    "yargs": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.3",
+    "@types/core-js": "^0.9.41",
+    "@types/debug": "^0.0.29",
+    "@types/express": "^4.0.35",
+    "@types/knex": "^0.0.44",
+    "@types/node": "^7.0.12",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
